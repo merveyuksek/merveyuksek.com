@@ -396,7 +396,7 @@ template {
   padding-left: 10%;
   padding-right: 10%; }
 
-#about, #history, #photoSection p, #contact {
+#about, #history, #photoSection, #contact {
   padding-top: 40px;
   padding-bottom: 40px; }
 

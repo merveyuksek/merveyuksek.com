@@ -1,5 +1,5 @@
 /* reset CSS */
-@import 'normalize';
+@import "normalize";
 
 /* Variables */
 
@@ -237,6 +237,7 @@ h1 {
 .about-description p {
   @extend %text-section;
 }
+
 #skills {
   margin-top: 30px;
 }
@@ -306,9 +307,12 @@ h1 {
 
 /* PHOTOS */
 
+#photoSection{
+  @extend %top-bottom-padding;
+}
+
 #photoSection p {
   @extend %left-right-padding;
-  @extend %top-bottom-padding;
   @extend %text-section;
   text-align: center;
   margin-top: 30px;
