@@ -80,31 +80,32 @@ $hero-text-color: white;
     @extend %hamburger-padding;
     @include border-radius(2px);
     display: block;
-    background-color: gray;
-    color: #fdf6f6;
+    background-color: rgba(128, 128, 128, 0.78);
+    color: white;
     font-size: 2em;
   }
 
-  .navigation-menu li {
-    z-index: 1000000;
-  }
+  
 
   #cross-button {
     border-bottom: none;
   }
 
   .navigation-menu {
+    position: absolute;
+    top: 0;
     ul {
       padding: 0;
       margin: 0;
 
       li {
         background-color: rgba(128, 128, 128, 0.78);
-        border-bottom: 1px rgba(202, 199, 199, 0.9) solid;
+        border-bottom: 1px rgba(88, 86, 86, 0.82) solid;
         text-align: center;
         padding-top: 5%;
         padding-bottom: 2%;
         height: 30px;
+        width: 100vw;
 
         svg {
           @extend %navigation-menu-position;
@@ -123,7 +124,7 @@ $hero-text-color: white;
     text-align: center;
     vertical-align: middle;
     position: absolute;
-    top: 70%;
+    top: 67%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: $hero-text-color;
@@ -142,11 +143,30 @@ $hero-text-color: white;
 }
 
 @media screen and (min-width: 500px) {
+  
   %center-position {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .navigation-bar {
+    position: absolute;
+    top:10px;
+    left: 10px;
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        margin: 3%;
+        font-size: 100%;
+        font-weight: bold;
+      }
+    }
   }
 
   .history-description {
@@ -166,6 +186,7 @@ $hero-text-color: white;
     vertical-align: middle;
     color: $hero-text-color;
     width: 90%;
+    font-weight: bold;
 
     #name {
       font-size: 400%;
@@ -201,30 +222,35 @@ h1 {
 
 /* HERO*/
 
-.parallax {
-  background-color: white;
-  background-image: url("photos/merveee.jpg");
+// .parallax {
+//   background-color: white;
+//   background-image: url("photos/merveee.jpg");
+//   height: 100vh;
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+#video-container {
+  width: 100%;
   height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(2px);
+  
 }
 
-.navigation-bar {
-  ul {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    color: #535050;
-
-    li {
-      margin: 1%;
-      font-size: 100%;
-    }
-  }
+#videobcg {
+  min-width: 100%;
+  min-height:100%;
+  z-index: -1;
 }
+
+
 
 /* ABOUT */
 
