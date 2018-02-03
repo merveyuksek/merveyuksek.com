@@ -2,27 +2,12 @@
 <html lang="en">
 
 <head>
-
+    
     <meta charset="UTF-8">
     <title>Merve Yüksek</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="merveyuksek.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112208375-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-112208375-1');
-    </script>
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script src="jquery-ui.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
-    <script type="text/javascript" src="merveyuksek.js"></script>
-    <script src="lazysizes.min.js" async=""></script>
 
 </head>
 
@@ -31,27 +16,25 @@
     <section class="parallax" id="hero-video">
 
         <div id="video-container">
-            <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-                <source src="videos/merve_hands_colored_small.mp4"> Sorry, your browser does not support the video tag.
-                <source src="videos/merve_hands_colored.webm"> Sorry, your browser does not support the video tag.
+            <video id="videobcg" preload="auto" autoplay loop="loop" muted="muted">
+                <source src="videos/merve_hero_video.mp4"> Sorry, your browser does not support the video tag.
+                <source src="videos/merve_hzero_video.webm"> Sorry, your browser does not support the video tag.
             </video>
         </div>
 
-
         <div class="navigation-bar">
-                <ul>
-                    <li><a class="smooth-scroll" href="#about">About</a></li>
-                    <li><a class="smooth-scroll" href="#history">History</a></li>
-                    <li><a class="smooth-scroll" href="#photoSection">Photos</a></li>
-                    <li><a class="smooth-scroll" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-    
-            <div class="hero-text">
-                <p id="name">Merve Yüksek</p>
-                <p id="profession">Frontend Developer</p>
-            </div>
-            
+            <ul>
+                <li><a class="smooth-scroll" href="#about">About</a></li>
+                <li><a class="smooth-scroll" href="#history">History</a></li>
+                <li><a class="smooth-scroll" href="#photoSection">Photos</a></li>
+                <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="hero-text">
+            <p id="name">Merve Yüksek</p>
+            <p id="profession">Frontend Developer</p>
+        </div>
 
         <div class="hamburger">
             <i class="fas fa-bars"></i>
@@ -59,33 +42,23 @@
 
         <div class="navigation-menu">
             <ul>
-
-
                 <li id="cross-button"><i class="fas fa-times"></i></li>
 
-                <a class="smooth-scroll" href="#about">
-                    <li>About</li>
-                </a>
-                <a class="smooth-scroll" href="#history">
-                    <li>History</li>
-                </a>
-                <a class="smooth-scroll" href="#photoSection">
-                    <li>Photos</li>
-                </a>
-                <a class="smooth-scroll" href="#contact">
-                    <li id="contact-button">Contact</li>
-                </a>
+                <li><a class="smooth-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="smooth-scroll" href="#history">History</a>
+                </li>
+                <li>
+                    <a class="smooth-scroll" href="#photoSection">Photos</a>
+                </li>
+                <li id="contact-button">
+                    <a class="smooth-scroll" href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
 
-        
-
-
-
-
-
     </section>
-
 
     <section id="about">
         <div class="about-description">
@@ -117,9 +90,9 @@
                 </div>
 
                 <div>
-                        <img src="icons/sass.svg" alt="SASS icon">
-                        <span>SASS</span>
-                    </div>
+                    <img src="icons/sass.svg" alt="SASS icon">
+                    <span>SASS</span>
+                </div>
 
                 <div>
                     <img src="icons/javascript.svg" alt="Javascript icon">
@@ -130,14 +103,17 @@
                     <img src="icons/jquery.svg" alt="jquery icon">
                     <span>jQuery</span>
                 </div>
+
                 <div>
                     <img src="icons/bootstrap.svg" alt="bootstrap icon">
                     <span>Bootstrap</span>
                 </div>
+
                 <div>
                     <img src="icons/wordpress.svg" alt="Wordpress icon">
                     <span>WordPress</span>
                 </div>
+
                 <div>
                     <img src="icons/sketch.svg" alt="Sketch icon">
                     <span>Sketch</span>
@@ -147,7 +123,6 @@
                     <img src="icons/git.svg" alt="Git icon">
                     <span>GIT</span>
                 </div>
-
             </div>
         </div>
 
@@ -187,7 +162,6 @@
                     <p class="place">Technische Universität Chemnitz,Germany </p>
                     <p class="work">Erasmus Programme-Faculty of Science </p>
                     <p class="date">Mar. 2016 - Sep. 2016 </p>
-
                 </div>
             </li>
 
@@ -213,8 +187,6 @@
 
                 </div>
             </li>
-
-
         </ul>
     </section>
 
@@ -224,21 +196,21 @@
             for UNICEF, İLKYAR(Relief foundation for Elementary Schools), Ataturkist Ideology Association, and Çiğdem Environment
             Association. I am always willing to learn or try new things. Here are some shoots from those lovely times..</p>
         <div id="photos">
-            <img class="lazyload" data-src="photos/snap44.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap1.jpg"   src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap9.jpg"   src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap6.jpg"   src="photos/blank.jpg" alt="">            
-            <img class="lazyload" data-src="photos/snap2.jpg"   src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap28.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap3.jpg"   src="photos/blank.jpg" alt="">    
-            <img class="lazyload" data-src="photos/snap38.jpeg" src="photos/blank.jpg"  alt=""> 
-            <img class="lazyload" data-src="photos/snap40.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap31.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap20.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap26.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap25.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap24.jpg"  src="photos/blank.jpg" alt="">
-            <img class="lazyload" data-src="photos/snap22.jpg"  src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap44.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap1.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap9.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap6.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap2.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap28.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap3.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap38.jpeg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap40.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap31.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap20.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap26.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap25.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap24.jpg" src="photos/blank.jpg" alt="">
+            <img class="lazyload" data-src="photos/snap22.jpg" src="photos/blank.jpg" alt="">
         </div>
     </section>
 
@@ -275,6 +247,23 @@
     </section>
 
     <footer>merve yüksek 2018</footer>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112208375-1"></script>
+
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script src="merveyuksek.js"></script>
+    <script src="lazysizes.min.js" async=""></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112208375-1');
+    </script>
 
 </body>
 
