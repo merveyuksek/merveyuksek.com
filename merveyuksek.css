@@ -584,7 +584,6 @@ h1 {
 
 /* HISTORY */
 #history {
-  margin: 0;
   background-color: rgba(166, 171, 168, 0.78); }
   #history ul {
     flex-direction: column;
