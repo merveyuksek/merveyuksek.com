@@ -616,6 +616,12 @@ h1 {
   max-width: 85%;
   max-height: 85%; }
 
+.ept-icon {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
 /* PHOTOS */
 #photoSection p {
   text-align: center;
@@ -646,7 +652,7 @@ h1 {
   display: none; }
 
 footer {
-  font-size: 90%;
+  font-size: 13px;
   color: rgba(175, 171, 171, 0.88);
   text-align: center;
   position: relative;

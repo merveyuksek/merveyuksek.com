@@ -241,7 +241,6 @@ h1 {
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px);
-  
 }
 
 #videobcg {
@@ -340,6 +339,9 @@ h1 {
   max-height: 85%;
 }
 
+.ept-icon{
+  @include border-radius(10px);
+}
 /* PHOTOS */
 
 #photoSection{
@@ -392,7 +394,7 @@ h1 {
 }
 
 footer {
-  font-size: 90%;
+  font-size: 13px;
   color: rgba(175, 171, 171, 0.88);
   text-align: center;
   position: relative;
