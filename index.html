@@ -6,21 +6,13 @@
     <meta charset="UTF-8">
     <title>Merve Yüksek</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="merveyuksek.css">
 
 </head>
 
 <body>
 
-    <section id="hero-video">
-
-        <div id="video-container">
-            <video id="videobcg" preload="auto" autoplay loop="loop" muted="muted">
-                <source src="videos/merve_hero_video.mp4"> Sorry, your browser does not support the video tag.
-                <source src="videos/merve_hero_video.webm"> Sorry, your browser does not support the video tag.
-            </video>
-        </div>
+    <section id="hero">
 
         <div class="navigation-bar">
             <ul>
@@ -28,13 +20,15 @@
                 <li><a class="smooth-scroll" href="#history">History</a></li>
                 <li><a class="smooth-scroll" href="#photoSection">Photos</a></li>
                 <li><a class="smooth-scroll" href="#contact">Contact</a></li>
-                <li class="blog-link"><a href="https://medium.com/@merveyuksek" target="_blank">Blog</a></li>
+            </ul>
+            <ul>
+                <li><a class="blog-link" href="https://medium.com/@merveyuksek" target="_blank">Blog</a></li>
             </ul>
         </div>
 
-        <div class="hero-text">
-            <p id="name">Merve Yüksek</p>
-            <p id="profession">Frontend Developer</p>
+        <div class="hero-text-container">
+            <p class="hero-text name">Merve Yüksek</p>
+            <p class="hero-text profession">Frontend Developer</p>
         </div>
 
         <div class="hamburger">
@@ -243,14 +237,12 @@
         </div>
 
     </section>
-
     <footer>merve yüksek 2018</footer>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112208375-1"></script>
 
     <script src="jquery.min.js"></script>
-    <script src="jquery-ui.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <script src="merveyuksek.js"></script>
     <script src="lazysizes.min.js" async=""></script>

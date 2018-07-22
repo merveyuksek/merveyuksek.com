@@ -4,7 +4,6 @@
 /* Variables */
 
 $common-font: "Helvetica", Arial, sans-serif;
-$hero-text-color: white;
 
 /* Extend */
 
@@ -85,8 +84,6 @@ $hero-text-color: white;
     font-size: 2em;
   }
 
-  
-
   #cross-button {
     border-bottom: none;
   }
@@ -120,22 +117,20 @@ $hero-text-color: white;
     display: none;
   }
 
-  .hero-text {
+  .hero-text-container {
     text-align: center;
     vertical-align: middle;
     position: absolute;
     top: 67%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $hero-text-color;
-    width: 80%;
 
-    #name {
+    .name {
       font-size: 400%;
       margin: 0;
     }
 
-    #profession {
+    .profession {
       font-size: 200%;
       margin: 0;
     }
@@ -143,7 +138,7 @@ $hero-text-color: white;
 }
 
 @media screen and (min-width: 500px) {
-  
+
   %center-position {
     position: absolute;
     top: 50%;
@@ -152,19 +147,49 @@ $hero-text-color: white;
   }
 
   .navigation-bar {
-    position: absolute;
-    top:10px;
-    left: 10px;
-    ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    ul:first-child {
       display: flex;
       align-items: center;
       margin: 0;
       padding: 0;
-  
+
       li {
-        margin: 3%;
+        margin-left: 1.5rem;
+      }
+    }
+    ul:last-child {
+      margin: 1.5rem 0;
+      padding: 0;
+      li {
+        margin-right: 1.5rem;
+      }
+    }
+    ul {
+      li {
         font-size: 100%;
         font-weight: bold;
+
+        a[href="#about"] {
+          color: #209FDF;
+        }
+
+        a[href="#history"] {
+          color: #6020DF;
+        }
+
+        a[href="#photoSection"] {
+          color: #DF2020;
+        }
+
+        a[href="#contact"] {
+          color: #DF6020;
+        }
+        .blog-link {
+          color: #20DF40;
+        }
       }
     }
   }
@@ -180,22 +205,20 @@ $hero-text-color: white;
     display: none;
   }
 
-  .hero-text {
+  .hero-text-container {
     @extend %center-position;
     text-align: center;
     vertical-align: middle;
-    color: $hero-text-color;
-    width: 90%;
     font-weight: bold;
 
-    #name {
+    .name {
       font-size: 400%;
       margin: 0;
     }
 
-    #profession {
+    .profession {
       font-size: 200%;
-      margin: 0;
+      margin: 8px;
     }
   }
 }
@@ -211,7 +234,6 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 h1 {
@@ -220,45 +242,54 @@ h1 {
   font-size: 200%;
 }
 
-/* HERO*/
+/* HERO */
 
-// .parallax {
-//   background-color: white;
-//   background-image: url("photos/merveee.jpg");
-//   height: 100vh;
-//   background-attachment: fixed;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
-#video-container {
-  width: 100%;
+#hero {
+  background-image: url("./photos/atmosphere-background.jpg");
   height: 100vh;
-  overflow: hidden;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
-}
-
-#videobcg {
-  min-width: 100%;
-  min-height: 100%;
-  background: url(videos/merve_hero_poster.png) no-repeat scroll 0 0 #FFFFFF;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  right: 0;
-  width: auto;
-  z-index: -1;
-  min-height: 100%;
-  min-width: 100%;
-  bottom: 0;
-  height: auto;
 }
 
+/* Text Animation*/
+.hero-text {
+  text-align: center;
+  background: linear-gradient(
+                  60deg,
+                  hsl(0, 75%, 50%) 10%,
+                  hsl(20, 75%, 50%) 10%,
+                  hsl(20, 75%, 50%) 25%,
+                  hsl(50, 75%, 50%) 25%,
+                  hsl(50, 75%, 50%) 40%,
+                  hsl(130, 75%, 50%) 40%,
+                  hsl(130, 75%, 50%) 55%,
+                  hsl(200, 75%, 50%) 55%,
+                  hsl(200, 75%, 50%) 70%,
+                  hsl(260, 75%, 50%) 70%,
+                  hsl(260, 75%, 50%) 85%,
+                  hsl(0, 75%, 50%) 85%
+  );
 
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 10s BeProud linear infinite,
+  3s Always ease alternate infinite;
+}
+
+@keyframes BeProud {
+  100% {
+    background-position: 100vw 0px;
+  }
+}
+
+@keyframes Always {
+  100% {
+    transform: scale(1.1);
+  }
+}
 
 /* ABOUT */
 
@@ -292,7 +323,7 @@ h1 {
 #history {
   @extend %left-right-padding;
   @extend %top-bottom-padding;
-  background-color: rgba(166, 171, 168, 0.78);
+  background-color: rgba(224, 237, 243, 0.86);
 
   ul {
     @extend %flex-center-section;
@@ -339,12 +370,13 @@ h1 {
   max-height: 85%;
 }
 
-.ept-icon{
+.ept-icon {
   @include border-radius(10px);
 }
+
 /* PHOTOS */
 
-#photoSection{
+#photoSection {
   @extend %top-bottom-padding;
 }
 
@@ -400,3 +432,5 @@ footer {
   position: relative;
   bottom: 2px;
 }
+
+

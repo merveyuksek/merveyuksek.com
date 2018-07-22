@@ -470,41 +470,58 @@ template {
   .navigation-bar {
     display: none; }
 
-  .hero-text {
+  .hero-text-container {
     text-align: center;
     vertical-align: middle;
     position: absolute;
     top: 67%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    width: 80%; }
-    .hero-text #name {
+    transform: translate(-50%, -50%); }
+    .hero-text-container .name {
       font-size: 400%;
-      margin: 0; }
-    .hero-text #profession {
+      margin: 0;
+    }
+    .hero-text-container .profession {
       font-size: 200%;
-      margin: 0; } }
+      margin: 0; }
+}
+
 @media screen and (min-width: 500px) {
-  .hero-text {
+  .hero-text-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
 
   .navigation-bar {
-    position: absolute;
-    top: 10px;
-    left: 10px; }
-    .navigation-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .navigation-bar ul:first-child {
       display: flex;
       align-items: center;
       margin: 0;
       padding: 0; }
-      .navigation-bar ul li {
-        margin: 3%;
-        font-size: 100%;
-        font-weight: bold; }
+      .navigation-bar ul:first-child li {
+        margin-left: 1.5rem; }
+    .navigation-bar ul:last-child {
+      margin: 1.5rem 0;
+      padding: 0; }
+      .navigation-bar ul:last-child li {
+        margin-right: 1.5rem; }
+    .navigation-bar ul li {
+      font-size: 100%;
+      font-weight: bold; }
+      .navigation-bar ul li a[href="#about"] {
+        color: #209FDF; }
+      .navigation-bar ul li a[href="#history"] {
+        color: #6020DF; }
+      .navigation-bar ul li a[href="#photoSection"] {
+        color: #DF2020; }
+      .navigation-bar ul li a[href="#contact"] {
+        color: #DF6020; }
+      .navigation-bar ul li .blog-link {
+        color: #20DF40; }
 
   .history-description {
     margin-left: 6%;
@@ -516,18 +533,16 @@ template {
   .navigation-menu {
     display: none; }
 
-  .hero-text {
+  .hero-text-container {
     text-align: center;
     vertical-align: middle;
-    color: white;
-    width: 90%;
     font-weight: bold; }
-    .hero-text #name {
+    .hero-text-container .name {
       font-size: 400%;
       margin: 0; }
-    .hero-text #profession {
+    .hero-text-container .profession {
       font-size: 200%;
-      margin: 0; } }
+      margin: 8px; } }
 /* COMMON */
 ul {
   list-style-type: none; }
@@ -536,38 +551,42 @@ body {
   font-family: "Helvetica", Arial, sans-serif; }
 
 a {
-  text-decoration: none;
-  color: white; }
+  text-decoration: none; }
 
 h1 {
   text-align: center;
   margin: 10px;
   font-size: 200%; }
 
-/* HERO*/
-#video-container {
-  width: 100%;
+/* HERO */
+#hero {
+  background-image: url("./photos/atmosphere-background.jpg");
   height: 100vh;
-  overflow: hidden;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px); }
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-#videobcg {
-  min-width: 100%;
-  min-height: 100%;
-  background: url(videos/merve_hero_poster.png) no-repeat scroll 0 0 #FFFFFF;
-  background-size: cover;
-  position: absolute;
-  right: 0;
-  width: auto;
-  z-index: -1;
-  min-height: 100%;
-  min-width: 100%;
-  bottom: 0;
-  height: auto; }
+/* Text Animation*/
+.hero-text {
+  text-align: center;
+  background: linear-gradient(60deg, #df2020 10%, #df6020 10%, #df6020 25%, #dfbf20 25%, #dfbf20 40%, #20df40 40%, #20df40 55%, #209fdf 55%, #209fdf 70%, #6020df 70%, #6020df 85%, #df2020 85%);
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 10s BeProud linear infinite, 3s Always ease alternate infinite; }
+
+@keyframes BeProud {
+  100% {
+    background-position: 100vw 0px;
+  }
+}
+@keyframes Always {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 
 /* ABOUT */
 #about {
