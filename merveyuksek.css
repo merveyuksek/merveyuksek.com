@@ -393,8 +393,8 @@ template {
 /* Variables */
 /* Extend */
 #about, #history, #photoSection p {
-  padding-left: 10%;
-  padding-right: 10%; }
+  padding-left: 5%;
+  padding-right: 5%; }
 
 #about, #history, #photoSection, #contact {
   padding-top: 40px;
@@ -411,7 +411,7 @@ template {
   justify-content: center;
   align-items: center; }
 
-#history ul, #history ul li, .history-container {
+#about, #history ul, #history ul li, .history-container {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -433,7 +433,7 @@ template {
     left: 12px; }
 
   .history-description {
-    max-width: 240px;
+    width: 240px;
     margin-left: 6%; }
 
   .hamburger {
@@ -479,13 +479,13 @@ template {
     transform: translate(-50%, -50%); }
     .hero-text-container .name {
       font-size: 400%;
-      margin: 0;
-    }
+      margin: 0; }
     .hero-text-container .profession {
       font-size: 200%;
       margin: 0; }
-}
 
+  .about-description {
+    max-width: 90vw; } }
 @media screen and (min-width: 500px) {
   .hero-text-container {
     position: absolute;
@@ -505,7 +505,7 @@ template {
       .navigation-bar ul:first-child li {
         margin-left: 1.5rem; }
     .navigation-bar ul:last-child {
-      margin: 1.5rem 0;
+      margin: 1.25rem 0;
       padding: 0; }
       .navigation-bar ul:last-child li {
         margin-right: 1.5rem; }
@@ -522,6 +522,9 @@ template {
         color: #DF6020; }
       .navigation-bar ul li .blog-link {
         color: #20DF40; }
+
+  .about-description {
+    max-width: 60vw; }
 
   .history-description {
     margin-left: 6%;
@@ -578,18 +581,13 @@ h1 {
 
 @keyframes BeProud {
   100% {
-    background-position: 100vw 0px;
-  }
-}
+    background-position: 100vw 0px; } }
 @keyframes Always {
   100% {
-    transform: scale(1.1);
-  }
-}
-
-
+    transform: scale(1.1); } }
 /* ABOUT */
 #about {
+  flex-direction: column;
   text-align: center; }
 
 #skills {
@@ -603,7 +601,7 @@ h1 {
 
 /* HISTORY */
 #history {
-  background-color: rgba(166, 171, 168, 0.78); }
+  background-color: #D9E2E6; }
   #history ul {
     flex-direction: column;
     list-style-type: none;
@@ -612,19 +610,17 @@ h1 {
       margin-top: 30px; }
 
 .work {
-  color: black; }
-
-.date {
-  color: #005900; }
+  color: #DF6020; }
 
 .place {
-  color: #157be7; }
+  color: #209FDF; }
 
 .history-container {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.84);
   height: 12vw;
   width: 12vw;
@@ -639,7 +635,8 @@ h1 {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  vertical-align: middle; }
 
 /* PHOTOS */
 #photoSection p {

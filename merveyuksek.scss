@@ -8,8 +8,8 @@ $common-font: "Helvetica", Arial, sans-serif;
 /* Extend */
 
 %left-right-padding {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 %top-bottom-padding {
@@ -70,7 +70,7 @@ $common-font: "Helvetica", Arial, sans-serif;
   }
 
   .history-description {
-    max-width: 240px;
+    width: 240px;
     margin-left: 6%;
   }
 
@@ -135,6 +135,10 @@ $common-font: "Helvetica", Arial, sans-serif;
       margin: 0;
     }
   }
+
+  .about-description{
+    max-width: 90vw;
+  }
 }
 
 @media screen and (min-width: 500px) {
@@ -161,7 +165,7 @@ $common-font: "Helvetica", Arial, sans-serif;
       }
     }
     ul:last-child {
-      margin: 1.5rem 0;
+      margin: 1.25rem 0;
       padding: 0;
       li {
         margin-right: 1.5rem;
@@ -192,6 +196,10 @@ $common-font: "Helvetica", Arial, sans-serif;
         }
       }
     }
+  }
+
+  .about-description{
+    max-width: 60vw;
   }
 
   .history-description {
@@ -296,6 +304,8 @@ h1 {
 #about {
   @extend %left-right-padding;
   @extend %top-bottom-padding;
+  @extend %flex-center-section;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -323,7 +333,7 @@ h1 {
 #history {
   @extend %left-right-padding;
   @extend %top-bottom-padding;
-  background-color: rgba(224, 237, 243, 0.86);
+  background-color: #D9E2E6;
 
   ul {
     @extend %flex-center-section;
@@ -343,21 +353,22 @@ h1 {
 }
 
 .work {
-  color: black;
+  color: #DF6020;
 }
 
-.date {
-  color: #005900;
-}
+//.date {
+//  color: #20DF40;
+//}
 
 .place {
-  color: #157be7;
+  color: #209FDF;
 }
 
 .history-container {
   @extend %flex-center-section;
   @extend %text-section;
   @include border-radius(10px);
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.84);
   height: 12vw;
   width: 12vw;
@@ -372,6 +383,7 @@ h1 {
 
 .ept-icon {
   @include border-radius(10px);
+  vertical-align: middle;
 }
 
 /* PHOTOS */
