@@ -442,7 +442,7 @@ template {
     -ms-border-radius: 2px;
     border-radius: 2px;
     display: block;
-    background-color: rgba(128, 128, 128, 0.78);
+    background-color: rgba(128, 128, 128, 0.5);
     color: white;
     font-size: 2em; }
 
@@ -456,12 +456,12 @@ template {
       padding: 0;
       margin: 0; }
       .navigation-menu ul li {
-        background-color: rgba(128, 128, 128, 0.78);
-        border-bottom: 1px rgba(88, 86, 86, 0.82) solid;
+        background-color: rgba(128, 128, 128, 0.5);
+        border-bottom: 1px rgba(128, 128, 128, 0.6) solid;
         text-align: center;
-        padding-top: 5%;
-        padding-bottom: 2%;
-        height: 30px;
+        padding-top: 3%;
+        padding-bottom: 1%;
+        height: 20px;
         width: 100vw; }
         .navigation-menu ul li svg {
           color: #fdf6f6;
@@ -474,7 +474,7 @@ template {
     text-align: center;
     vertical-align: middle;
     position: absolute;
-    top: 67%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
     .hero-text-container .name {
@@ -482,7 +482,7 @@ template {
       margin: 0; }
     .hero-text-container .profession {
       font-size: 200%;
-      margin: 0; }
+      margin: 5px 0; }
 
   .about-description {
     max-width: 90vw; } }
@@ -512,16 +512,6 @@ template {
     .navigation-bar ul li {
       font-size: 100%;
       font-weight: bold; }
-      .navigation-bar ul li a[href="#about"] {
-        color: #209FDF; }
-      .navigation-bar ul li a[href="#history"] {
-        color: #6020DF; }
-      .navigation-bar ul li a[href="#photoSection"] {
-        color: #DF2020; }
-      .navigation-bar ul li a[href="#contact"] {
-        color: #DF6020; }
-      .navigation-bar ul li .blog-link {
-        color: #20DF40; }
 
   .about-description {
     max-width: 60vw; }
@@ -560,6 +550,19 @@ h1 {
   text-align: center;
   margin: 10px;
   font-size: 200%; }
+
+ul.nav-links li {
+  font-weight: bold; }
+  ul.nav-links li a[href="#about"] {
+    color: #6020DF; }
+  ul.nav-links li a[href="#history"] {
+    color: #209FDF; }
+  ul.nav-links li a[href="#photoSection"] {
+    color: #20DF40; }
+  ul.nav-links li a[href="#contact"] {
+    color: #DF6020; }
+  ul.nav-links li .blog-link {
+    color: #DF2020; }
 
 /* HERO */
 #hero {
