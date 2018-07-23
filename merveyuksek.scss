@@ -315,6 +315,7 @@ ul.nav-links li {
 
 .about-description p {
   @extend %text-section;
+  margin-bottom: 0;
 }
 
 #skills {
