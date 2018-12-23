@@ -5,12 +5,14 @@ $(document).ready(function() {
   $(".hamburger").click(function() {
     $(".navigation-menu").slideToggle("slow", function() {});
     $(".hamburger").hide();
+    $(".hero-text-container").css({ top: '60%' });
   });
 
   $("#cross-button").click(function() {
     $(".navigation-menu").slideToggle("slow", function() {
       $(".navigation-menu").hide();
       $(".hamburger").show();
+        $(".hero-text-container").css({ top: '50%' });
     });
   });
 
